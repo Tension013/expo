@@ -1,5 +1,5 @@
 // Copyright 2018-present 650 Industries. All rights reserved.
-
+/*
 #if __has_include(<EXNotifications/EXNotificationsEmitter.h>)
 
 #import "EXScopedNotificationsEmitter.h"
@@ -61,3 +61,4 @@
 @end
 
 #endif
+ */

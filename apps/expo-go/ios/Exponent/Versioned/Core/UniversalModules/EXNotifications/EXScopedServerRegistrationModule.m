@@ -1,5 +1,5 @@
 // Copyright 2018-present 650 Industries. All rights reserved.
-
+/*
 #if __has_include(<EXNotifications/EXServerRegistrationModule.h>)
 
 #import "EXScopedServerRegistrationModule.h"
@@ -39,3 +39,4 @@ static NSString * const kEXRegistrationInfoKey = EX_UNVERSIONED(@"EXNotification
 @end
 
 #endif
+ */

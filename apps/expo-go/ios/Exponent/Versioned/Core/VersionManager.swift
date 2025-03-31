@@ -106,6 +106,23 @@ final class VersionManager: EXVersionManagerObjC {
       updatesKernelService: updatesKernelService,
       scopeKey: manifest.scopeKey()
     ), preventModuleOverriding: true)
+
+    // Override expo-notifications modules
+    registerExpoNotificationsModules(appContext)
+  }
+
+  private func registerExpoNotificationsModules(_ appContext: AppContext) {
+    let modules: [Module] = [
+      ExpoGoNotificationsCategoriesModule(appContext: appContext),
+      ExpoGoNotificationsEmitterModule(appContext: appContext),
+      ExpoGoNotificationsHandlerModule(appContext: appContext),
+      ExpoGoNotificationsPresentationModule(appContext: appContext),
+      ExpoGoNotificationsSchedulerModule(appContext: appContext),
+      ExpoGoNotificationsServerRegistrationModule(appContext: appContext)
+    ]
+    for module in modules {
+      appContext.moduleRegistry.register(module: module, preventModuleOverriding:true)
+    }
   }
 
   private func createAppContextConfig() -> AppContextConfig {
