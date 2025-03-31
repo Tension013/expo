@@ -4,7 +4,7 @@ import ExpoModulesCore
 import UIKit
 import MachO
 
-public class PresentationModule: Module, NotificationDelegate {
+open class PresentationModule: Module, NotificationDelegate {
   var presentedNotifications: Set<String> = []
 
   public func definition() -> ModuleDefinition {

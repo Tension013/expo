@@ -7,7 +7,7 @@ import MachO
 let onHandleNotification = "onHandleNotification"
 let onHandleNotificationTimeout = "onHandleNotificationTimeout"
 
-public class HandlerModule: Module, NotificationDelegate, SingleNotificationHandlerTaskDelegate {
+open class HandlerModule: Module, NotificationDelegate, SingleNotificationHandlerTaskDelegate {
   var tasksMap: [String: SingleNotificationHandlerTask] = [:]
 
   public func definition() -> ModuleDefinition {

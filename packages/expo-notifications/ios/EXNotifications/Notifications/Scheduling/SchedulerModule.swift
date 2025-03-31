@@ -20,7 +20,7 @@ let calendarNotificationTriggerComponentsKey = "value"
 let calendarNotificationTriggerTimezoneKey = "timezone"
 // swiftlint:enable identifier_name
 
-public class SchedulerModule: Module {
+open class SchedulerModule: Module {
   public func definition() -> ModuleDefinition {
     Name("ExpoNotificationScheduler")
 

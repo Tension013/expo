@@ -4,7 +4,7 @@ import ExpoModulesCore
 import UIKit
 import MachO
 
-public class CategoriesModule: Module {
+open class CategoriesModule: Module {
   public func definition() -> ModuleDefinition {
     Name("ExpoNotificationCategoriesModule")
 

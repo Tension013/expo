@@ -4,7 +4,7 @@ import ExpoModulesCore
 import UIKit
 import MachO
 
-public class ServerRegistrationModule: Module {
+open class ServerRegistrationModule: Module {
   public func definition() -> ModuleDefinition {
     Name("NotificationsServerRegistrationModule")
 
