@@ -1,7 +1,5 @@
 // Copyright 2018-present 650 Industries. All rights reserved.
 
-// TODO: rework the new Swift Notification code for ExpoGo
-/*
 #import "EXScopedNotificationBuilder.h"
 #import "EXScopedNotificationsUtils.h"
 
@@ -44,4 +42,3 @@
 }
 
 @end
- */
