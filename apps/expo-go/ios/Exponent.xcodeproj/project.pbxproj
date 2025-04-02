@@ -67,11 +67,9 @@
 		B26DF25628048DB80071B0CD /* EXAppLoaderHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26DF25528048DB80071B0CD /* EXAppLoaderHelpers.swift */; };
 		B287BB2427DD909C008DA282 /* expo-root.pem in Resources */ = {isa = PBXBuildFile; fileRef = B287BB2327DD909B008DA282 /* expo-root.pem */; };
 		B2A8E25F2CBF3B24004CA9AF /* EXApiUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A8E25E2CBF3B1E004CA9AF /* EXApiUtil.swift */; };
-		B2B492172462F5EF001576D8 /* EXScopedNotificationsEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B492162462F5EF001576D8 /* EXScopedNotificationsEmitter.m */; };
 		B2E2CCC72AA7D33E00E2260C /* HomeAppLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E2CCC62AA7D33E00E2260C /* HomeAppLoader.swift */; };
 		B2E2CCCA2AA7DAD400E2260C /* ManifestAndAssetRequestHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E2CCC92AA7DAD400E2260C /* ManifestAndAssetRequestHeaders.swift */; };
 		B2E2CCD02AA7DF9C00E2260C /* HomeAppLoaderTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E2CCCF2AA7DF9C00E2260C /* HomeAppLoaderTask.swift */; };
-		B2F7C02B246B09890060EE06 /* EXScopedNotificationsHandlerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F7C02A246B09890060EE06 /* EXScopedNotificationsHandlerModule.m */; };
 		B2F7C02E246B09AE0060EE06 /* EXScopedNotificationsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F7C02D246B09AE0060EE06 /* EXScopedNotificationsUtils.m */; };
 		B505BA2020CAF80D0046ACFB /* EXEnvironmentMocks.m in Sources */ = {isa = PBXBuildFile; fileRef = B505BA1A20CAF80D0046ACFB /* EXEnvironmentMocks.m */; };
 		B505BA2120CAF80D0046ACFB /* EXEnvironmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B505BA1D20CAF80D0046ACFB /* EXEnvironmentTests.m */; };
@@ -315,13 +313,9 @@
 		B26DF25528048DB80071B0CD /* EXAppLoaderHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXAppLoaderHelpers.swift; sourceTree = "<group>"; };
 		B287BB2327DD909B008DA282 /* expo-root.pem */ = {isa = PBXFileReference; lastKnownFileType = text; name = "expo-root.pem"; path = "Exponent/Supporting/expo-root.pem"; sourceTree = "<group>"; };
 		B2A8E25E2CBF3B1E004CA9AF /* EXApiUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXApiUtil.swift; sourceTree = "<group>"; };
-		B2B492152462F5EF001576D8 /* EXScopedNotificationsEmitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EXScopedNotificationsEmitter.h; sourceTree = "<group>"; };
-		B2B492162462F5EF001576D8 /* EXScopedNotificationsEmitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EXScopedNotificationsEmitter.m; sourceTree = "<group>"; };
 		B2E2CCC62AA7D33E00E2260C /* HomeAppLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAppLoader.swift; sourceTree = "<group>"; };
 		B2E2CCC92AA7DAD400E2260C /* ManifestAndAssetRequestHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestAndAssetRequestHeaders.swift; sourceTree = "<group>"; };
 		B2E2CCCF2AA7DF9C00E2260C /* HomeAppLoaderTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAppLoaderTask.swift; sourceTree = "<group>"; };
-		B2F7C029246B09890060EE06 /* EXScopedNotificationsHandlerModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EXScopedNotificationsHandlerModule.h; sourceTree = "<group>"; };
-		B2F7C02A246B09890060EE06 /* EXScopedNotificationsHandlerModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EXScopedNotificationsHandlerModule.m; sourceTree = "<group>"; };
 		B2F7C02C246B09AE0060EE06 /* EXScopedNotificationsUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EXScopedNotificationsUtils.h; sourceTree = "<group>"; };
 		B2F7C02D246B09AE0060EE06 /* EXScopedNotificationsUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EXScopedNotificationsUtils.m; sourceTree = "<group>"; };
 		B505BA0E20CAF77A0046ACFB /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -729,14 +723,10 @@
 		B2B492142462F5B7001576D8 /* EXNotifications */ = {
 			isa = PBXGroup;
 			children = (
-				B2B492152462F5EF001576D8 /* EXScopedNotificationsEmitter.h */,
-				B2B492162462F5EF001576D8 /* EXScopedNotificationsEmitter.m */,
 				FC756CCA24CB542800665AE6 /* EXScopedNotificationSerializer.h */,
 				FC756CC824CB537400665AE6 /* EXScopedNotificationSerializer.m */,
-				B2F7C029246B09890060EE06 /* EXScopedNotificationsHandlerModule.h */,
 				FCA11CA624C1215B00C1FC54 /* EXScopedNotificationCategoriesModule.h */,
 				FCA11CA524C1215B00C1FC54 /* EXScopedNotificationCategoriesModule.m */,
-				B2F7C02A246B09890060EE06 /* EXScopedNotificationsHandlerModule.m */,
 				B2F7C02C246B09AE0060EE06 /* EXScopedNotificationsUtils.h */,
 				B2F7C02D246B09AE0060EE06 /* EXScopedNotificationsUtils.m */,
 				B21115F6246C1B47005BA616 /* EXScopedNotificationBuilder.h */,
@@ -1890,7 +1880,6 @@
 				31361A642261C6CB00662769 /* EXScopedPermissions.m in Sources */,
 				B5FB74A11FF6DADC001C764B /* EXConstantsBinding.m in Sources */,
 				B526B5081E6A543500606CAB /* ExpoKit.m in Sources */,
-				B2B492172462F5EF001576D8 /* EXScopedNotificationsEmitter.m in Sources */,
 				314791F02551CF2A00A81BA1 /* EXScopedServerRegistrationModule.m in Sources */,
 				F1D6AF61244714C100AC1C74 /* EXDevMenuGestureRecognizer.m in Sources */,
 				78D8252A204F826700CBD9D9 /* EXApiV2Result.m in Sources */,
@@ -1958,7 +1947,6 @@
 				40CB1D762CD2A0C200CB3717 /* EXSplashScreenModule.m in Sources */,
 				40CB1D772CD2A0C200CB3717 /* EXSplashScreenService.m in Sources */,
 				40CB1D782CD2A0C200CB3717 /* EXSplashScreenViewController.m in Sources */,
-				B2F7C02B246B09890060EE06 /* EXScopedNotificationsHandlerModule.m in Sources */,
 				28F885A428FEC26000CFD75C /* EXTextDirectionController.swift in Sources */,
 				ABE005EBFA92123617D22216 /* ExpoModulesProvider.swift in Sources */,
 			);
