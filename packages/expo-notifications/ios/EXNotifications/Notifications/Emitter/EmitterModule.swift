@@ -40,20 +40,26 @@ open class EmitterModule: Module, NotificationDelegate {
     return true
   }
 
-  public func didReceive(_ response: UNNotificationResponse, completionHandler: @escaping () -> Void) -> Bool {
+  open func didReceive(_ response: UNNotificationResponse, completionHandler: @escaping () -> Void) -> Bool {
     NotificationCenterManager.shared.lastResponse = response
-    // TODO: convert serialization to Records
-    let serializedResponse = EXNotificationSerializer.serializedNotificationResponse(response)
-    self.sendEvent(onDidReceiveNotificationResponse, serializedResponse as [String: Any])
+    self.sendEvent(onDidReceiveNotificationResponse, serializedResponse(response))
     completionHandler()
     return true
   }
 
-  public func willPresent(_ notification: UNNotification, completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) -> Bool {
-    // TODO: convert serialization to Records
-    let serializedNotification = EXNotificationSerializer.serializedNotification(notification)
-    self.sendEvent(onDidReceiveNotification, serializedNotification as [String: Any])
+  open func willPresent(_ notification: UNNotification, completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) -> Bool {
+    self.sendEvent(onDidReceiveNotification, serializedNotification(notification))
     completionHandler([])
     return true
+  }
+
+  open func serializedNotification(_ notification: UNNotification) -> [String: Any] {
+    // TODO: convert serialization to Records
+    return EXNotificationSerializer.serializedNotification(notification)
+  }
+
+  open func serializedResponse(_ response: UNNotificationResponse) -> [String: Any] {
+    // TODO: convert serialization to Records
+    return EXNotificationSerializer.serializedNotificationResponse(response)
   }
 }

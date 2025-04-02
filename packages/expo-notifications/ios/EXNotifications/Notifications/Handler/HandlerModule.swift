@@ -38,7 +38,7 @@ open class HandlerModule: Module, NotificationDelegate, SingleNotificationHandle
 
   // MARK: - NotificationDelegate
 
-  public func willPresent(_ notification: UNNotification, completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) -> Bool {
+  open func willPresent(_ notification: UNNotification, completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) -> Bool {
     let task = SingleNotificationHandlerTask(notification: notification, completionHandler: completionHandler, delegate: self)
     tasksMap[task.identifier] = task
     task.start()
