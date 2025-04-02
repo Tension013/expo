@@ -15,4 +15,11 @@ public final class ExpoGoNotificationsHandlerModule: HandlerModule {
 
     super.init(appContext: appContext)
   }
+
+  override public func willPresent(_ notification: UNNotification, completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) -> Bool {
+    if EXScopedNotificationsUtils.shouldNotification(notification, beHandledByExperience: scopeKey) {
+      return super.willPresent(notification, completionHandler: completionHandler)
+    }
+    return false
+  }
 }

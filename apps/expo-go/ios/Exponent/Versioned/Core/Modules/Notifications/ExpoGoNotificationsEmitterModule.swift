@@ -15,4 +15,30 @@ public final class ExpoGoNotificationsEmitterModule: EmitterModule {
 
     super.init(appContext: appContext)
   }
+
+  override public func didReceive(_ response: UNNotificationResponse, completionHandler: @escaping () -> Void) -> Bool {
+    if EXScopedNotificationsUtils.shouldNotification(response.notification, beHandledByExperience: scopeKey) {
+      return super.didReceive(response, completionHandler: completionHandler)
+    } else {
+      completionHandler()
+    }
+    return true
+  }
+
+  override public func willPresent(_ notification: UNNotification, completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) -> Bool {
+    if EXScopedNotificationsUtils.shouldNotification(notification, beHandledByExperience: scopeKey) {
+      return super.willPresent(notification, completionHandler: completionHandler)
+    } else {
+      completionHandler([])
+    }
+    return true
+  }
+
+  override public func serializedNotification(_ notification: UNNotification) -> [String: Any] {
+    return EXScopedNotificationSerializer.serializedNotification(notification)
+  }
+
+  override public func serializedResponse(_ response: UNNotificationResponse) -> [String: Any] {
+    return EXScopedNotificationSerializer.serializedNotificationResponse(response)
+  }
 }
